@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: #fff;
+    display: flex;
+    border-bottom: 16px solid #341f97;
+    justify-content: center; /*Centralizando o título na página.*/
+    text-transform: uppercase; /*Colocando todas as letras em MAIUSCULAS.*/
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;
+}
+
+form {
+    background-color: #cad6e5; /*Cor de fundo do formulário.*/
+    padding: 24px 0;
+    text-align: center; /*Centralizando o texto na página.*/
+    display: none;
+}   
+
+form h2 {
+    margin-bottom: 16px; /*Adicionando uma margem entre o título e os campos dos botões.*/
+}
+
+input, button {
+    padding: 8px;
+}
+
+button {
+    background-color: #009432;
+    border: none;
+    cursor: pointer; /*Colocando o cursor do mouse com uma mãozinha, dá a impressão q é um item clicável.*/
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#botao-cancelar {
+    background-color: red;
+}
+
+ul { 
+    display: flex; /*Alinhando as imagens uma do lado da outra.*/
+    flex-wrap: wrap; /*Quando as imagens ocupar toda a tela, cria-se uma nova linha.*/
+}
+
+ul li {
+    max-width: 25%; /*Limitando a quatidade de itens por linha*/
+    list-style: none; /*Removendo um pontinho que fica na parte inferior da foto.*/
+    position: relative; /*Colocando a barra do link cada uma em sua respectiva imagem.*/
+    max-height: 200px;
+    overflow-y: hidden; /* Alinhando as imagens com o mesmo tamanho.*/
+}
+
+ul li img {
+    width: 100%; /*Colocando as imagens para ocupar 100% da página.*/
+
+}
+
+.overlay-imagem-link { /*quando apertar o link, abrir uma página para ver a foto original.*/
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7); /* Cor do plano de fundo do link.*/
+    position: absolute; /* A barra do link ficará na extremidade da foto.*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Fazendo a barra com o link desaparecer.*/
+    transition: all ease .5s; /* Efeito para o link aparecer/desaparecer suavemente*/
+}
+
+.overlay-imagem-link a {
+    color: #fff; /* Mudando a cor do link.*/
+    text-decoration: none; /*Removendo o underline do link.*/
+}
+
+ul li:hover .overlay-imagem-link { 
+    opacity: 1; /* Quando colocar o cursor do mause encima da imagem, aparecerá o link para clicar.*/
+}
